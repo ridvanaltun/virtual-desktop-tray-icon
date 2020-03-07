@@ -13,3 +13,7 @@ This project based on: https://github.com/m0ngr31/VirtualDesktopManager
 ## Download
 
 You can download lastest release from: https://github.com/ridvanaltun/virtual-desktop-tray-icon/releases
+
+## Auto start after start
+
+Add this program to your startup folder, eg. `C:\Users\ridva\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`. Now, the program starts after on every start.
