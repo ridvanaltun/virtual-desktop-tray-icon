@@ -9,3 +9,7 @@ This project based on: https://github.com/m0ngr31/VirtualDesktopManager
 ![First](https://raw.githubusercontent.com/ridvanaltun/virtual-desktop-tray-icon/master/images/1.png)
 
 ![Second](https://raw.githubusercontent.com/ridvanaltun/virtual-desktop-tray-icon/master/images/2.png)
+
+## Download
+
+You can download lastest release from: https://github.com/ridvanaltun/virtual-desktop-tray-icon/releases
