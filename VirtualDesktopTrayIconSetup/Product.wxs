@@ -2,10 +2,10 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
   <!-- Give product a unique ID -->
-  <?define ProductCode = "{4AC87EF2-921C-4A05-985C-622CC7C9040A}" ?>
+  <?define ProductCode = "{22537EAA-29D7-490F-8A30-01056F2A597B}" ?>
 
   <!-- Build version -->
-  <?define BuildVersion = 1.0.0.0 ?>
+  <?define BuildVersion = 1.0.1 ?>
 
   <!-- Fixed upgrade Id -->
   <?define UpgradeCode = "{723FA6E7-06AC-43F2-B5C1-19DBF3660B09}" ?>
