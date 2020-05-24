@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  <String Id="Company">Ridvan Altun</String>
+
+  <String Id="ProductFolderName">VirtualDesktopTrayIcon</String>
+
+  <String Id="ProductName">Virtual Desktop Tray Icon</String>
+
+  <String Id="Description">Show your current virtual desktop in taskbar as a tray icon</String>
+  <String Id="Comments">Show your current virtual desktop</String>
+  <String Id="Keywords">windows,tray</String>
+
+  <String Id="DowngradeErrorMessage">A newer version of Virtual Desktop Tray Icon is already installed.</String>
+
+  <String Id="Language">1033</String>
+</WixLocalization>

@@ -4,16 +4,14 @@
 
 This project based on: https://github.com/m0ngr31/VirtualDesktopManager
 
-## How so?
+## Showcase
 
-![First](https://raw.githubusercontent.com/ridvanaltun/virtual-desktop-tray-icon/master/images/1.png)
+When you on first virtual screen: ![First](https://raw.githubusercontent.com/ridvanaltun/virtual-desktop-tray-icon/master/images/1.png)
 
-![Second](https://raw.githubusercontent.com/ridvanaltun/virtual-desktop-tray-icon/master/images/2.png)
+When you on second virtual screen: ![Second](https://raw.githubusercontent.com/ridvanaltun/virtual-desktop-tray-icon/master/images/2.png)
 
-## Download
+etc..
 
-You can download lastest release from: https://github.com/ridvanaltun/virtual-desktop-tray-icon/releases
+## Install
 
-## Auto start after start
-
-Add this program to your startup folder, eg. `C:\Users\ridva\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`. Now, the program starts after on every start.
+Download lastest release from [releases page](https://github.com/ridvanaltun/virtual-desktop-tray-icon/releases). You can install this program using .msi file.

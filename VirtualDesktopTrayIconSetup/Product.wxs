@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <!-- Give product a unique ID -->
+  <?define ProductCode = "{4AC87EF2-921C-4A05-985C-622CC7C9040A}" ?>
+
+  <!-- Build version -->
+  <?define BuildVersion = 1.0.0.0 ?>
+
+  <!-- Fixed upgrade Id -->
+  <?define UpgradeCode = "{723FA6E7-06AC-43F2-B5C1-19DBF3660B09}" ?>
+
+  <!-- Define main product -->
+  <Product Id="$(var.ProductCode)" Name="!(loc.ProductName)" Language="!(loc.Language)" Version="$(var.BuildVersion)" Manufacturer="!(loc.Company)" UpgradeCode="$(var.UpgradeCode)">
+
+    <!-- Provide package details -->
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Platform="$(var.Platform)" Manufacturer="!(loc.Company)" Description="!(loc.Description)" Keywords="!(loc.Keywords)" Comments="!(loc.Comments)" Languages="!(loc.Language)" />
+
+    <!-- Downgrade error message -->
+    <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeErrorMessage)" />
+
+    <!-- Include .cab file into .msi file -->
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- Define main app icon -->
+    <Icon Id="icon.ico" SourceFile="$(var.VirtualDesktopTrayIcon.ProjectDir)\img\app.ico" />
+
+    <!-- Use the icon.ico icon for this installer (shows in add/remove programs) -->
+    <Property Id="ARPPRODUCTICON">icon.ico</Property>
+    <!-- Help/Support website (shows in add/remove programs) -->
+    <Property Id="ARPURLINFOABOUT">https://github.com/ridvanaltun/virtual-desktop-tray-icon</Property>
+
+    <!-- Create a basic UI for the installer -->
+    <UIRef Id="WixUI_Minimal" />
+
+    <!-- Change the installer UI background images -->
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\Assets\License.rtf" />
+    <WixVariable Id="WixUIDialogBmp" Value="$(var.ProjectDir)\Assets\Background.bmp" />
+    <WixVariable Id="WixUIBannerBmp" Value="$(var.ProjectDir)\Assets\Banner.bmp" />
+
+    <!-- Defines components, shortcuts, files etc... for installer -->
+    <Feature Id="ProductFeature" Title="VirtualDesktopTrayIcon" Level="1">
+
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="PublishedComponents" />
+
+    </Feature>
+
+  </Product>
+
+</Wix>

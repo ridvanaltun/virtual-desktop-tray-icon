@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <Fragment>
+
+    <!-- Product Components -->
+    <ComponentGroup Id="ProductComponents">
+
+      <!-- Shortcut -->
+      <ComponentRef Id="MainAppShortcut" />
+
+      <!--Registry Entries -->
+      <ComponentRef Id="RegistryEntries" />
+
+    </ComponentGroup>
+
+    <!-- Installed files -->
+    <DirectoryRef Id="INSTALLFOLDER" FileSource="..\VirtualDesktopTrayIcon\bin\$(var.Configuration)\">
+
+      <!-- Shortcut to main application -->
+      <Component Id="MainAppShortcut" Guid="{4D01BCE8-902C-4690-8182-B72EE5847CB5}">
+
+        <Shortcut Id="MainAppShortcut" Name="!(loc.ProductName)" Target="[INSTALLFOLDER]VirtualDesktopTrayIcon.exe" Directory="InstallProgramMenuFolder" WorkingDirectory="INSTALLFOLDER" Icon="icon.ico" />
+
+        <!-- Our unique key for this component/shortcut -->
+        <RegistryValue Id="RegShortcutKey" Root="HKCU" Key="SOFTWARE\!(loc.ProductFolderName)" Name="Shortcut" Value="1" Type="integer" KeyPath="yes" />
+
+        <!-- Remove start menu items -->
+        <RemoveFolder Id="RemoveStartMenu" Directory="InstallProgramMenuFolder" On="uninstall" />
+
+      </Component>
+
+      <!-- Registry Entries -->
+      <Component Id="RegistryEntries" Guid="{988824A2-BB1F-4A9F-967C-0EB7339F1C6B}">
+
+        <!-- Registry value to add startup main application -->
+        <RegistryValue Id="RegStartup" Root="HKCU" Key="Software\Microsoft\Windows\CurrentVersion\Run" Name="!(loc.ProductName)" Value="[INSTALLFOLDER]VirtualDesktopTrayIcon.exe" Type="string" KeyPath="yes" />
+
+      </Component>
+
+    </DirectoryRef>
+
+  </Fragment>
+
+</Wix>
