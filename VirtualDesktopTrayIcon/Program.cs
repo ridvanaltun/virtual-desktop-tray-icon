@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Collections.Generic;
-using System.Windows.Forms;
+using System.Diagnostics;
 using System.Drawing;
-using WindowsDesktop;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
+using WindowsDesktop;
 
 namespace VirtualDesktopTrayIcon
 {
@@ -19,15 +19,12 @@ namespace VirtualDesktopTrayIcon
             string procName = "VirtualDesktopTrayIcon";
             Process[] processNames = Process.GetProcessesByName(procName);
 
-            try
+            if (processNames.Length > 1)
             {
-                if (processNames[0].ProcessName == procName)
-                {
-                    // Do not execute process when a process already running
-                    MessageBox.Show("Program already running, look at your tray icons!", "Error");
-                }
+                // Do not execute process when a process already running
+                MessageBox.Show("Program already running, look at your tray icons!", "Error");
             }
-            catch (System.IndexOutOfRangeException)
+            else
             {
                 // Start
                 Init();
@@ -128,7 +125,7 @@ namespace VirtualDesktopTrayIcon
                     xPlacement = 90;
                     yPlacement = 100;
                 }
-                
+
                 Bitmap newIcon = Properties.Resources.mainIcoPng;
                 Font desktopNumberFont = new Font("Segoe UI", fontSize, FontStyle.Bold, GraphicsUnit.Pixel);
 
