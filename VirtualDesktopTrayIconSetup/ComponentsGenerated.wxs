@@ -2,16 +2,16 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
         <DirectoryRef Id="INSTALLFOLDER">
-            <Component Id="cmpA04EBBEEE267F6D941FD850C714E03CB" Guid="{161BD5D3-1D8C-4279-A100-441BCD6C999A}">
+            <Component Id="cmpA04EBBEEE267F6D941FD850C714E03CB" Guid="{4752D835-F1DF-4BCC-8F75-4C3EF2D2E5CA}">
                 <File Id="filDDE80C18A82BA3FB61B2CBA3270ED5E1" KeyPath="yes" Source="$(var.BasePath)\VirtualDesktop.xml" />
             </Component>
-            <Component Id="cmp010BD4CA4119C1EBFF52D9C9CB3CD4A4" Guid="{C0E809ED-212C-422D-BFCD-748D6642DF53}">
+            <Component Id="cmp010BD4CA4119C1EBFF52D9C9CB3CD4A4" Guid="{E82E4188-E481-408F-A1C3-66B3FA601883}">
                 <File Id="fil95248E69C5780BB78AC2953FDDA5E3AF" KeyPath="yes" Source="$(var.BasePath)\VirtualDesktopTrayIcon.exe" />
             </Component>
-            <Component Id="cmp58CFCE06FB45ABB3138A5451D0AEFCA2" Guid="{2CE96633-93AA-4F80-B34A-BFA11D63D86D}">
+            <Component Id="cmp58CFCE06FB45ABB3138A5451D0AEFCA2" Guid="{83E8F4CD-68F9-48C0-9480-99807C84DCC9}">
                 <File Id="fil93CBDE3422187683BFF07D188D592274" KeyPath="yes" Source="$(var.BasePath)\VirtualDesktopTrayIcon.exe.config" />
             </Component>
-            <Component Id="cmpCEE55DE32B74E8DC4C71885EE987A062" Guid="{5737ABBA-76DB-4AC4-9F90-2DCBAA3D83B8}">
+            <Component Id="cmpCEE55DE32B74E8DC4C71885EE987A062" Guid="{68579A0B-89FA-4588-96E9-76BE364ED99C}">
                 <File Id="filD4721FB566E1227410AAFA2C7E0C68D9" KeyPath="yes" Source="$(var.BasePath)\VirtualDesktopTrayIcon.pdb" />
             </Component>
         </DirectoryRef>
