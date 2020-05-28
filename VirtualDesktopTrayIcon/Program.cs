@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Drawing;
@@ -14,6 +15,26 @@ namespace VirtualDesktopTrayIcon
         /// </summary>
         [STAThread]
         static void Main()
+        {
+            string procName = "VirtualDesktopTrayIcon";
+            Process[] processNames = Process.GetProcessesByName(procName);
+
+            try
+            {
+                if (processNames[0].ProcessName == procName)
+                {
+                    // Do not execute process when a process already running
+                    MessageBox.Show("Program already running, look at your tray icons!", "Error");
+                }
+            }
+            catch (System.IndexOutOfRangeException)
+            {
+                // Start
+                Init();
+            }
+        }
+
+        private static void Init()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
